@@ -17,6 +17,11 @@ package_sets:
 # imported by other rock sets.
 layout:
    - rock.core
+   # The following packages should/can go to some package set´s .autobuild file later ...
+   # Then we can use shortcuts here like "- rover" and "- marta" etc.
+   - drivers/controldev
+   - drivers/orogen/controldev
+
    # Uncomment to enable the Rock/ROS bridge
    # You will also have to uncomment some lines in the package_sets above
    # - rock.ros
