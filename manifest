@@ -17,8 +17,13 @@ package_sets:
 # imported by other rock sets.
 layout:
    - rock.core
+   - rover
+
    # The following packages should/can go to some package set´s .autobuild file later ...
    # Then we can use shortcuts here like "- rover" and "- marta" etc.
+
+   # The following packages can not be easily put into a custom package set
+   # This is because rock/libs.autobuild overrides rover/drivers.autobuild whereas rover/source.yml overrides the branches of them
    - drivers/controldev
    - drivers/orogen/controldev
 
