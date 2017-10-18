@@ -5,10 +5,6 @@
 overrides:
   - pkg_set:github:/ESA-PRL/rover-package_set.git:
     branch: master
-  - drivers/controldev:
-    branch: onedimensional
-  - drivers/orogen/controldev:
-    branch: onedimensional
 #   - rtt
 #     branch: test
 #  
