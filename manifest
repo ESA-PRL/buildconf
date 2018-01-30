@@ -4,34 +4,34 @@
 #
 
 package_sets:
-   - github: rock-core/package_set
-   - github: rock-core/rock-package_set
-   - github: rock-tutorials/tutorials-package_set
-   - github: rock-simulation/simulation-package_set
-   - github: ESA-PRL/rover-package_set
-   # Uncomment to enable the Rock/ROS bridge
-   # You will also have to uncomment some lines in the layout below
-   # - gitorious: rock-ros/package_set
+    - github: rock-core/package_set
+    - github: rock-core/rock-package_set
+    - github: rock-tutorials/tutorials-package_set
+    - github: rock-simulation/simulation-package_set
+    - github: ESA-PRL/rover-package_set
+    # Uncomment to enable the Rock/ROS bridge
+    # You will also have to uncomment some lines in the layout below
+    # - gitorious: rock-ros/package_set
 
 # Layout. Note that the rock.base and orocos.toolchain sets are
 # imported by other rock sets.
 layout:
-   - rock.core
-   - rover
+    - rock.core
+    - rover
 
-   # The following packages should/can go to some package set´s .autobuild file later ...
-   # Then we can use shortcuts here like "- rover" and "- marta" etc.
+    # The following packages should/can go to some package set´s .autobuild file later ...
+    # Then we can use shortcuts here like "- rover" and "- marta" etc.
 
-   # The following packages can not be easily put into a custom package set
-   # This is because rock/libs.autobuild overrides rover/drivers.autobuild whereas rover/source.yml overrides the branches of them
-#   - drivers/controldev
-#   - drivers/orogen/controldev
+    # The following packages can not be easily put into a custom package set
+    # This is because rock/libs.autobuild overrides rover/drivers.autobuild whereas rover/source.yml overrides the branches of them
+    # - drivers/controldev
+    # - drivers/orogen/controldev
 
-   # Uncomment to enable the Rock/ROS bridge
-   # You will also have to uncomment some lines in the package_sets above
-   # - rock.ros
-   # Uncomment to checkout and build all tutorials  
-   # - rock.tutorials    
+    # Uncomment to enable the Rock/ROS bridge
+    # You will also have to uncomment some lines in the package_sets above
+    # - rock.ros
+    # Uncomment to checkout and build all tutorials
+    # - rock.tutorials
 
 # The layout section specifies what to build, and where to build it (as a
 # subdirectory of the root installation directory). In the example below, all
@@ -77,5 +77,3 @@ layout:
 # ignored_packages:
 #   - rtt
 #
-
-
