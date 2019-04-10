@@ -3,7 +3,7 @@
 # package
 #
 overrides:
-  - pkg_set:github:/ESA-PRL/rover-package_set.git:
+  - pkg_set:github:/esa-prl/rover-package_set.git:
     branch: master
 #   - rtt
 #     branch: test
