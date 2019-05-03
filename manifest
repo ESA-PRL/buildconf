@@ -19,6 +19,9 @@ package_sets:
 layout:
     - rock.core
     - rover
+    # - hdpr
+    # - marta
+    # - exoter
 
     # The following packages should/can go to some package set´s .autobuild file later ...
     # Then we can use shortcuts here like "- rover" and "- marta" etc.
