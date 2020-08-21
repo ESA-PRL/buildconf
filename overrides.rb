@@ -10,6 +10,3 @@
 # Autobuild::Package['rtt'].prefix='/opt/autoproj/2.0'
 #
 # See config.yml to set the prefix:/opt/autoproj/2.0 globally for all packages.
-
-Autobuild::Package['external/libply'].env_set "CXX", "g++-5"
-Autobuild::Package['external/libply'].env_set "CC", "gcc-5"
