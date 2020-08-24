@@ -1,0 +1,3 @@
+---
+- base/console_bridge:
+    remote_branch: refs/pull/4/merge
