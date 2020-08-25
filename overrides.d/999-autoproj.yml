@@ -1,0 +1,3 @@
+---
+- tools/pocolog_cpp:
+    remote_branch: refs/pull/22/merge
