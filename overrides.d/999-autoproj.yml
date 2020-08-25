@@ -1,0 +1,3 @@
+---
+- tools/pocolog2msgpack:
+    remote_branch: refs/pull/8/merge
