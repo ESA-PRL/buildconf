@@ -1,0 +1,3 @@
+---
+- base/orogen/types:
+    remote_branch: refs/pull/37/merge
