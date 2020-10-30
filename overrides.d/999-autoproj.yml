@@ -1,0 +1,3 @@
+---
+- tools/logger:
+    remote_branch: refs/pull/9/merge
