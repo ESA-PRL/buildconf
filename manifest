@@ -5,7 +5,6 @@
 
 package_sets:
     - github: rock-core/package_set
-      branch: qt4_focal
     - github: rock-core/rock-package_set
     # - github: esa-prl/rover-package_set
     # - github: esa-prl/hdpr-package_set
