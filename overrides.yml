@@ -2,7 +2,9 @@
 # in the package sets. Below is an example to change the branch name for a given
 # package
 #
-# overrides:
+overrides:
+  - pkg_set:github:/esa-prl/rover-package_set.git:
+    branch: master
 #   - rtt
 #     branch: test
 #  

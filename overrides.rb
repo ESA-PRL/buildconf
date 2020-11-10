@@ -10,4 +10,3 @@
 # Autobuild::Package['rtt'].prefix='/opt/autoproj/2.0'
 #
 # See config.yml to set the prefix:/opt/autoproj/2.0 globally for all packages.
-

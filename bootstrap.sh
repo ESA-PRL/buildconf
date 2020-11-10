@@ -1,9 +1,9 @@
 #! /bin/sh
 
-CONF_URL=${CONF_URL:=https://github.com/rock-core/buildconf.git}
+CONF_URL=${CONF_URL:=https://github.com/esa-prl/buildconf.git}
 RUBY=ruby
 AUTOPROJ_BOOTSTRAP_URL=http://rock-robotics.org/master/autoproj_bootstrap
-BOOTSTRAP_ARGS=
+BOOTSTRAP_ARGS=--seed-config=config.yml
 
 if test -n "$1" && test "$1" != "dev" && test "$1" != "localdev"; then
     RUBY=$1
@@ -57,21 +57,11 @@ CONF_SITE=${CONF_URL%%/*}
 CONF_REPO=${CONF_URL#*/}
 
 PUSH_TO=git@$CONF_SITE:$CONF_REPO
-until [ -n "$GET_REPO" ]
-do
-    echo -n "Which protocol do you want to use to access $CONF_REPO on $CONF_SITE? [git|ssh|http] (default: http) "
-    read ANSWER
-    ANSWER=`echo $ANSWER | tr "[:upper:]" "[:lower:]"`
-    case "$ANSWER" in
-        "ssh") GET_REPO=git@$CONF_SITE:$CONF_REPO ;;
-        "http"|"") GET_REPO=https://$CONF_SITE/$CONF_REPO ;;
-        "git") GET_REPO=git://$CONF_SITE/$CONF_REPO ;;
-    esac
-done
+GET_REPO=https://$CONF_SITE/$CONF_REPO
 
 $RUBY autoproj_bootstrap $@ git $GET_REPO push_to=$PUSH_TO $BOOTSTRAP_ARGS
 
 if test "x$@" != "xlocaldev"; then
-    $SHELL -c '. $PWD/env.sh; autoproj update; autoproj osdeps; autoproj build'
+    bash -c '. $PWD/env.sh; autoproj update; autoproj osdeps; autoproj build'
 fi
 
