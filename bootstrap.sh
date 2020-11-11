@@ -1,6 +1,7 @@
 #! /bin/sh
 
 CONF_URL=${CONF_URL:=https://github.com/esa-prl/buildconf.git}
+CONF_BRANCH=prl
 RUBY=ruby
 AUTOPROJ_BOOTSTRAP_URL=http://rock-robotics.org/master/autoproj_bootstrap
 BOOTSTRAP_ARGS=--seed-config=config.yml
@@ -59,7 +60,7 @@ CONF_REPO=${CONF_URL#*/}
 PUSH_TO=git@$CONF_SITE:$CONF_REPO
 GET_REPO=https://$CONF_SITE/$CONF_REPO
 
-$RUBY autoproj_bootstrap $@ git $GET_REPO push_to=$PUSH_TO $BOOTSTRAP_ARGS
+$RUBY autoproj_bootstrap $@ git $GET_REPO branch=$CONF_BRANCH push_to=$PUSH_TO $BOOTSTRAP_ARGS
 
 if test "x$@" != "xlocaldev"; then
     bash -c '. $PWD/env.sh; autoproj update; autoproj osdeps; autoproj build'
