@@ -5,9 +5,5 @@
 overrides:
   - pkg_set:github:/rock-core/package_set.git:
     branch: qt4_focal
-  - pkg_set:github:/esa-prl/rover-package_set.git:
-    branch: focal
-  - pkg_set:github:/esa-prl/exoter-package_set.git:
-    branch: focal
 #   - rtt
 #     branch: test
